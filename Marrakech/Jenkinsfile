@@ -1,38 +1,7 @@
-final FULL_BUILD = params.FULL_BUILD
+genPipe {
+  branch = 'master'
+  scmUrl = 'https://github.com/Elixear/Marrakesh.git'
 
-final PROJECT_TYPE = 'java'
-
-final PROJECT_NAME = "GSXR/micro1"
-
-final WORKDIR = "Marrakech"
-
-pipeline {
-  agent any
-
-  stages {
-    stage("Provision") {
-      steps {
-        dir(WORKDIR) {
-          provision(PROJECT_TYPE)
-        }
-      }
-    }
-  	
-    stage('Build') {
-      steps {
-      	dir(WORKDIR) {
-      	  bat 'mvn package'
-      	}
-      }
-    }
-    
-    stage('Make Container') {
-      steps {
-        dir(WORKDIR) {
-          bat "docker build -t ${PROJECT_NAME}:${env.BUILD_ID} ."
-          bat "docker tag ${PROJECT_NAME}:${env.BUILD_ID} ${PROJECT_NAME}:latest"
-        }
-      }
-    }
-  }
+  projectName = "gsxr/micro1"
+  infrastructure = 'docker'
 }

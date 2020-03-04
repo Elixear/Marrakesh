@@ -4,7 +4,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'mvn package ./Marrakech/'
+      	dir("Marrakech") {
+      	  bat 'mvn package'
+      	}
       }
     }
     

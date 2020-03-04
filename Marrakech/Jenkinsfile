@@ -2,6 +2,7 @@ genPipe {
   branch = 'master'
   scmUrl = 'https://github.com/Elixear/Marrakesh.git'
 
-  projectName = "gsxr/micro1"
+  name = "gsxr/micro1"
   infrastructure = 'docker'
+  lang = "java"
 }

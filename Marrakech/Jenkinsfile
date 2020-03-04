@@ -2,6 +2,8 @@ final FULL_BUILD = params.FULL_BUILD
 
 final PROJECT_TYPE = 'java'
 
+final PROJECT_NAME = "GSXR/micro1"
+
 pipeline {
   agent any
 
@@ -22,8 +24,8 @@ pipeline {
     
     stage('Make Container') {
       steps {
-      	bat "docker build -t snscaimito/ledger-service:${env.BUILD_ID} ./Marrakech/"
-      	bat "docker tag snscaimito/ledger-service:${env.BUILD_ID} snscaimito/ledger-service:latest"
+      	bat "docker build -t ${PROJECT_NAME}:${env.BUILD_ID} ./Marrakech/"
+        bat "docker tag ${PROJECT_NAME}:${env.BUILD_ID} ${PROJECT_NAME}:latest"
       }
     }
   }

@@ -4,14 +4,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn package'
+        bat 'mvn package ./Marrakech/'
       }
     }
     
     stage('Make Container') {
       steps {
-      sh "docker build -t snscaimito/ledger-service:${env.BUILD_ID} ."
-      sh "docker tag snscaimito/ledger-service:${env.BUILD_ID} snscaimito/ledger-service:latest"
+      	bat "docker build -t snscaimito/ledger-service:${env.BUILD_ID} ./Marrakech/"
+      	bat "docker tag snscaimito/ledger-service:${env.BUILD_ID} snscaimito/ledger-service:latest"
       }
     }
   }

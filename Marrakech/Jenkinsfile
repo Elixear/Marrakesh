@@ -1,7 +1,15 @@
+final FULL_BUILD = params.FULL_BUILD
+
+final PROJECT_TYPE = 'java'
+
 pipeline {
   agent any
 
   stages {
+    stage("Provision") {
+  	  provision(PROJECT_TYPE)
+    }
+  	
     stage('Build') {
       steps {
       	dir("Marrakech") {

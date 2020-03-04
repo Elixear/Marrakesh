@@ -5,4 +5,11 @@ genPipe {
   name = "gsxr/micro1"
   infrastructure = 'docker'
   lang = "java"
+  
+  unitTest = true
+  integrationTest = true
+  
+  qualityAnalysis = true
+  
+  nexusRepository = "localhost:8081"
 }

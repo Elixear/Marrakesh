@@ -7,7 +7,9 @@ pipeline {
 
   stages {
     stage("Provision") {
-  	  provision(PROJECT_TYPE)
+      steps {
+        provision(PROJECT_TYPE)
+      }
     }
   	
     stage('Build') {

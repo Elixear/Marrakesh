@@ -3,7 +3,8 @@ genPipe {
   scmUrl = 'https://github.com/Elixear/Marrakesh.git'
 
   name = "gsxr/micro1"
-  infrastructure = 'vm'
+  infrastructure = 'docker'
+  provider = 'aws'
   lang = "java"
   
   unitTest = true

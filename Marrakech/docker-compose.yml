@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    build: elixear/micro1:latest
+    ports:
+      - "9000:8080"

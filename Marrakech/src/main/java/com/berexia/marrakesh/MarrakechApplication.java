@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class MarrakechApplication extends SpringBootServletInitializer {
+	private int count = 0;
 	
 	@GetMapping("/")
 	public String home() {
-		return "Hello";
+		return "Hello " + count++;
 	}
 	
 	public static void main(String[] args) {

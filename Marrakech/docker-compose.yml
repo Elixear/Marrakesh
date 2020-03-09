@@ -1,6 +1,6 @@
 version: '3'
 services:
   web:
-    build: docker.io/elixear/micro1:latest
+    image: elixear/micro1:latest
     ports:
       - "9000:8080"

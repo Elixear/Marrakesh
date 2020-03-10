@@ -13,7 +13,7 @@ public class MarrakechApplication extends SpringBootServletInitializer {
 	
 	@GetMapping("/")
 	public String home() {
-		return "Hello There " + count++;
+		return "Hello Thereee " + count++;
 	}
 	
 	public static void main(String[] args) {

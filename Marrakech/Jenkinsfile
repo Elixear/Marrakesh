@@ -1,9 +1,9 @@
 genPipe {
-  branch = 'master'
+  branch = 'dev'
   scmUrl = 'https://github.com/Elixear/Marrakesh.git'
   
-  deployment_id = 1
-  name = "micro1"
+  deployment_id = 2
+  name = "micro2"
   infrastructure = 'vm'
   provider = 'aws'
   lang = "java"

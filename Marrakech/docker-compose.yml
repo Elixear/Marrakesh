@@ -1,6 +1,6 @@
 version: '3'
 services:
-  web:
-    image: elixear/micro1:latest
+  micro2:
+    image: elixear/micro2:latest
     ports:
-      - "9000:8080"
+      - "9010:8080"

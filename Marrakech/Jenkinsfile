@@ -1,4 +1,15 @@
   
 genPipe {
   app_deployment_id = 1
+  projectName = 'XGen'
+  appName = 'micro1'
+  language = 'java'
+  infrastructure = 'vm'
+  deploymentEnvironment = 'dev'
+  scmUrl = 'https://github.com/Elixear/Marrakesh.git'
+  branch = 'master'
+  workDirectory = 'Marrakech'
+  unitTest = true
+  integrationTest = true
+  qualityAnalysis = true
 }

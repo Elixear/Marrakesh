@@ -1,19 +1,4 @@
+  
 genPipe {
-  branch = 'master'
-  scmUrl = 'https://github.com/Elixear/Marrakesh.git'
-  
-  deployment_id = 1
-  name = "micro1"
-  infrastructure = 'vm'
-  provider = 'aws'
-  lang = "java"
-  
-  workDir = "Marrakech"
-  
-  unitTest = true
-  integrationTest = true
-  
-  qualityAnalysis = true
-  
-  nexusRepository = "localhost:8081"
+  app_deployment_id = 1
 }

@@ -1,6 +1,6 @@
 version: '3'
 services:
   web:
-    image: elixear/micro1:latest
+    image: elixear/xgen-micro1:latest
     ports:
       - "9000:8080"

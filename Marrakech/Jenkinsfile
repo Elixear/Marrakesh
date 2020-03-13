@@ -1,4 +1,4 @@
   
-genPipe {
+xgenPipeline {
   app_deployment_id = 1
 }
